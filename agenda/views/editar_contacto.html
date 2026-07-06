@@ -1,11 +1,32 @@
+$def with(contacto)
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Editar Contacto</title>
+</head>
+<body>
     <h1>Editar Contacto</h1>
-
-<form>
-  <label>ID:</label>
-  <input type="text" value="18" readonly><br><br>
-  
-  <button type="submit">Guardar Cambios</button>
-  <button type="button">Cancelar</button>
-</form>
+    
+    <form method="POST" action="">
+        <input type="hidden" name="id_contacto" value="$contacto['id_contacto']">
+        
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="$contacto['nombre']" required><br><br>
+        
+        <label>Primer Apellido:</label>
+        <input type="text" name="primer_apellido" value="$contacto['primer_apellido']" required><br><br>
+        
+        <label>Segundo Apellido:</label>
+        <input type="text" name="segundo_apellido" value="$contacto['segundo_apellido']"><br><br>
+        
+        <label>Email:</label>
+        <input type="email" name="email" value="$contacto['email']"><br><br>
+        
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" value="$contacto['telefono']"><br><br>
+        
+        <button type="submit">Guardar Cambios</button>
+        <a href="/lista_contactos"><button type="button">Cancelar</button></a>
+    </form>
+</body>
 </html>
