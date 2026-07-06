@@ -19,5 +19,8 @@ $for contacto in contactos:
         <td>$contacto['segundo_apellido']</td>
         <td>$contacto['email']</td>
         <td>$contacto['telefono']</td>
+        <td><a href="/ver_contacto/$contacto['id_contacto']">Ver</a></td>
+        <td><a href="/editar_contacto/$contacto['id_contacto']">Editar</a></td>
+        <td><a href="/borrar_contacto/$contacto['id_contacto']">Borrar</a></td>
     </tr>
 </table>

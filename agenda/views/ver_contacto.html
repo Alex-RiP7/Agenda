@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ver Contacto</title>
-</head>
-<body>
-    <h1>Ver Contacto</h1>
+$def with (contacto)
 
-    <label><strong>ID:</strong></label>
-    <p>18</p>
+<h1>Ver Contacto</h1><br>
 
-    <label><strong>Nombre:</strong></label>
-    <p>Dejah</p>
-
-    <label><strong>Primer Apellido:</strong></label>
-    <p>Thoris</p>
-
-    <label><strong>Segundo Apellido:</strong></label>
-    <p>Barsoom</p>
-
-    <label><strong>Teléfono:</strong></label>
-    <p>1111111</p>
-
-    <label><strong>Email:</strong></label>
-    <p>dejah@email.com</p>
-
-    <br><br>
-    <a href="/lista_contactos"><button>Regresar</button></a>
-</body>
-</html>
+<form>
+    <fieldset disabled>
+        <div class="mb-3">
+            <label for="id_contacto" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id_contacto" value="$contacto['id_contacto']">
+        </div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" value="$contacto['nombre']">
+        </div>
+        <div class="mb-3">
+            <label for="primer_apellido" class="form-label">Primer Apellido</label>
+            <input type="text" class="form-control" id="primer_apellido" value="$contacto['primer_apellido']">
+        </div>
+        <div class="mb-3">
+            <label for="segundo_apellido" class="form-label">Segundo Apellido</label>
+            <input type="text" class="form-control" id="segundo_apellido" value="$contacto['segundo_apellido']">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" value="$contacto['email']">
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" value="$contacto['telefono']">
+        </div>
+    </fieldset>
+</form>
+<br>
+<a class="btn btn-primary" href="/lista_contactos">Regresar</a>
