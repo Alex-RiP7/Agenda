@@ -3,7 +3,7 @@ import sqlite3
 
 render = web.template.render('views', base='layout')
 
-class EditarContacto:
+class BorrarContacto:
     
     def obtenerContacto(self, id_contacto):
         try:
@@ -30,7 +30,7 @@ class EditarContacto:
     def GET(self, id_contacto):
         contacto = self.obtenerContacto(id_contacto)
         if contacto:
-            return render.editar_contacto(contacto)
+            return render.borrar_contacto(contacto)
         else:
             return web.notfound("Contacto no encontrado")
 

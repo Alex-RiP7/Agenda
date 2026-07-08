@@ -1,11 +1,32 @@
-<html>
-    <h1>¿Eliminar Contacto?</h1>
-
-    <p>ID: 18</p>
-    <p>Nombre: Dejah Thoris Barsoom</p>
-
-    <p>¿Estás seguro?</p>
-
-    <button>Sí, Borrar</button>
-    <button>Cancelar</button>
-</html>
+$def with (contacto)
+<form method="POST">
+    <fieldset disabled>
+        <div class="mb-3">
+            <label for="id_contacto" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id_contacto" value="$contacto['id_contacto']">
+        </div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" value="$contacto['nombre']">
+        </div>
+        <div class="mb-3">
+            <label for="primer_apellido" class="form-label">Primer Apellido</label>
+            <input type="text" class="form-control" id="primer_apellido" value="$contacto['primer_apellido']">
+        </div>
+        <div class="mb-3">
+            <label for="segundo_apellido" class="form-label">Segundo Apellido</label>
+            <input type="text" class="form-control" id="segundo_apellido" value="$contacto['segundo_apellido']">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" value="$contacto['email']">
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" value="$contacto['telefono']">
+        </div>
+    </fieldset>
+    <button class="btn btn-primary">Borrar</button>
+</form>
+<br>
+<a class="btn btn-primary" href="/lista_contactos">Regresar</a>
