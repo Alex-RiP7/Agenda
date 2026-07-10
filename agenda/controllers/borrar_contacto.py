@@ -33,5 +33,16 @@ class BorrarContacto:
             return render.borrar_contacto(contacto)
         else:
             return web.notfound("Contacto no encontrado")
-
-   
+    
+    def POST(self, id_contacto):
+        try:
+            conn = sqlite3.connect('sql/agenda.db')
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM contactos WHERE id_contacto = ?", (id_contacto,))
+            conn.commit()
+            conn.close()
+            
+            raise web.seeother('/lista_contactos')
+        except Exception as e:
+            print(f"ERROR al borrar contacto: {e}")
+            return "Error al eliminar el contacto"

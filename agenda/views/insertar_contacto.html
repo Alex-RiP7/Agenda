@@ -1,23 +1,29 @@
 <html>
-    <h1>Nuevo Contacto</h1>
-
-    <form>
-    <label>Nombre:</label>
-    <input type="text"><br><br>
-  
-    <label>Primer Apellido:</label>
-    <input type="text"><br><br>
-  
-    <label>Segundo Apellido:</label>
-    <input type="text"><br><br>
-  
-    <label>Teléfono:</label>
-    <input type="tel"><br><br>
-  
-    <label>Email:</label>
-    <input type="email"><br><br>
-  
-  <button type="submit">Guardar</button>
-  <button type="button">Cancelar</button>
-</form>
+<head>
+    <meta charset="utf-8">
+    <title>Nuevo Contacto</title>
+</head>
+<body>
+    <h1>Agregar Nuevo Contacto</h1>
+    
+    <form method="POST" action="">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+        
+        <label>Primer Apellido:</label><br>
+        <input type="text" name="primer_apellido" required><br><br>
+        
+        <label>Segundo Apellido:</label><br>
+        <input type="text" name="segundo_apellido"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+        
+        <label>Teléfono:</label><br>
+        <input type="tel" name="telefono"><br><br>
+        
+        <button type="submit">Guardar Contacto</button>
+        <a href="/lista_contactos"><button type="button">Cancelar</button></a>
+    </form>
+</body>
 </html>
